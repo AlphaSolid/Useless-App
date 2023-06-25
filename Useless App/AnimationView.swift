@@ -2,8 +2,7 @@ import SwiftUI
 import AVKit
 
 struct AnimationView: View {
-    @State var penguin  = penguinType.robot
-    //    @Binding var penguin: penguinType
+    @Binding var penguin: penguinType
     @State var up: CGFloat = 0.0
     @State var rotation: Double = 0.0
     let synthesizer = AVSpeechSynthesizer()
@@ -70,12 +69,5 @@ struct AnimationView: View {
                 .buttonStyle(.borderedProminent)
             }
         }
-    }
-}
-
-struct AnimationView_Previews: PreviewProvider {
-    //    @State var penguin: penguinType = penguinType.normal
-    static var previews: some View {
-        AnimationView()
     }
 }

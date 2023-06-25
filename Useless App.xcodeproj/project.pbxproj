@@ -14,6 +14,7 @@
 		F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02472A46A034003524AC /* PenguinCustomizer.swift */; };
 		F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02492A46A289003524AC /* CustomisationTypes.swift */; };
 		F1F08A962A46E5600008D0F5 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F08A952A46E5600008D0F5 /* AnimationView.swift */; };
+		F1F08AA22A4804600008D0F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F08AA12A4804600008D0F5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		F1AE02472A46A034003524AC /* PenguinCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinCustomizer.swift; sourceTree = "<group>"; };
 		F1AE02492A46A289003524AC /* CustomisationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomisationTypes.swift; sourceTree = "<group>"; };
 		F1F08A952A46E5600008D0F5 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		F1F08AA12A4804600008D0F5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1F08AA32A48048C0008D0F5 /* Useless-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Useless-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +60,12 @@
 		88FE5DB12A469ED90044D5B6 /* Useless App */ = {
 			isa = PBXGroup;
 			children = (
+				F1F08AA32A48048C0008D0F5 /* Useless-App-Info.plist */,
 				88FE5DB22A469ED90044D5B6 /* Useless_AppApp.swift */,
 				88FE5DB42A469ED90044D5B6 /* ContentView.swift */,
 				F1AE02492A46A289003524AC /* CustomisationTypes.swift */,
 				F1AE02472A46A034003524AC /* PenguinCustomizer.swift */,
+				F1F08AA12A4804600008D0F5 /* LaunchScreen.storyboard */,
 				88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */,
 				F1F08A952A46E5600008D0F5 /* AnimationView.swift */,
 				88FE5DB82A469EDA0044D5B6 /* Preview Content */,
@@ -138,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F08AA22A4804600008D0F5 /* LaunchScreen.storyboard in Resources */,
 				88FE5DBA2A469EDA0044D5B6 /* Preview Assets.xcassets in Resources */,
 				88FE5DB72A469EDA0044D5B6 /* Assets.xcassets in Resources */,
 			);
@@ -285,11 +291,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Useless App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Useless-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,11 +320,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Useless App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Useless-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

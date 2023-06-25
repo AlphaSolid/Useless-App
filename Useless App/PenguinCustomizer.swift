@@ -35,13 +35,13 @@ struct PenguinCustomizer: View {
                 Section("Traits") {
                     Picker("Personality Trait 1", selection: $kind) {
                         Text("Lazy")
-                            .tag(kindOfBrain.smart)
+                            .tag(kindOfBrain.lazy)
                         Text("Sleepy")
-                            .tag(kindOfBrain.smart)
+                            .tag(kindOfBrain.sleepy)
                         Text("Smart")
                             .tag(kindOfBrain.smart)
                         Text("Smart but acts dumb")
-                            .tag(kindOfBrain.smart)
+                            .tag(kindOfBrain.smartButDumb)
                     }
                     .pickerStyle(.menu)
                     
@@ -120,16 +120,10 @@ struct PenguinCustomizer: View {
                 if penguin == penguinType.robot {
                     Section("Robots Only") {
                         Picker("Generative Type", selection: $flipper) {
-                            Text("Super Slippery")
-                                .tag(flipperKind.superSlippery)
-                            Text("Slippery")
-                                .tag(flipperKind.slippery)
-                            Text("Normal")
-                                .tag(flipperKind.normal)
-                            Text("Suction")
-                                .tag(flipperKind.suction)
-                            Text("Super Strong Suction")
-                                .tag(flipperKind.superStrongSuction)
+                            Text("Natural")
+                                .tag(generativeType.natural)
+                            Text("Robotic")
+                                .tag(generativeType.robotic)
                         }
                         .pickerStyle(.menu)
                         
@@ -151,11 +145,14 @@ struct PenguinCustomizer: View {
                         }
                         .pickerStyle(.menu)
                     }
+                    Section("Minor Warning") {
+                        Label("Generative AIs are prone to failure", systemImage: "exclamationmark.triangle.fill")
+                    }
                 }
                 Button {
                     summonAlert = true
                 } label: {
-                    Text("See your penguin! (NO GOING BACK)")
+                    Text("See your penguin!")
                 }
             }
         }
@@ -166,6 +163,9 @@ struct PenguinCustomizer: View {
             Button("No", role: .cancel) {
                 summonAlert = false
             }
+        }
+        .fullScreenCover(isPresented: $summonAnimator) {
+            AnimationView(penguin: $penguin)
         }
         
     }
