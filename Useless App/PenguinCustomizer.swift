@@ -17,6 +17,8 @@ struct PenguinCustomizer: View {
     @State var penguinSize: sizeOfPenguin = .medium
     @State var gender: genderOfPenguin = .male
     @State var food: diet = .fish
+    @State var summonAnimator: Bool = false
+    @State var summonAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -150,6 +152,19 @@ struct PenguinCustomizer: View {
                         .pickerStyle(.menu)
                     }
                 }
+                Button {
+                    summonAlert = true
+                } label: {
+                    Text("See your penguin! (NO GOING BACK)")
+                }
+            }
+        }
+        .alert("Are you sure you want to continue? There is NO going back", isPresented: $summonAlert) {
+            Button("Yes", role: .destructive) {
+               summonAnimator = true
+            }
+            Button("No", role: .cancel) {
+                summonAlert = false
             }
         }
         
