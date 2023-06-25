@@ -14,8 +14,6 @@
 		F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02472A46A034003524AC /* PenguinCustomizer.swift */; };
 		F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02492A46A289003524AC /* CustomisationTypes.swift */; };
 		F1F08A962A46E5600008D0F5 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F08A952A46E5600008D0F5 /* AnimationView.swift */; };
-		F1F08A992A47F7CA0008D0F5 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1F08A982A47F7CA0008D0F5 /* ChatGPTSwift */; };
-		F1F08A9B2A47F7E40008D0F5 /* UselessThingsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F08A9A2A47F7E40008D0F5 /* UselessThingsSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +25,6 @@
 		F1AE02472A46A034003524AC /* PenguinCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinCustomizer.swift; sourceTree = "<group>"; };
 		F1AE02492A46A289003524AC /* CustomisationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomisationTypes.swift; sourceTree = "<group>"; };
 		F1F08A952A46E5600008D0F5 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
-		F1F08A9A2A47F7E40008D0F5 /* UselessThingsSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UselessThingsSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F08A992A47F7CA0008D0F5 /* ChatGPTSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +63,6 @@
 				F1AE02472A46A034003524AC /* PenguinCustomizer.swift */,
 				88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */,
 				F1F08A952A46E5600008D0F5 /* AnimationView.swift */,
-				F1F08A9A2A47F7E40008D0F5 /* UselessThingsSupport.swift */,
 				88FE5DB82A469EDA0044D5B6 /* Preview Content */,
 			);
 			path = "Useless App";
@@ -98,7 +93,6 @@
 			);
 			name = "Useless App";
 			packageProductDependencies = (
-				F1F08A982A47F7CA0008D0F5 /* ChatGPTSwift */,
 			);
 			productName = "Useless App";
 			productReference = 88FE5DAF2A469ED90044D5B6 /* Useless App.app */;
@@ -129,7 +123,6 @@
 			);
 			mainGroup = 88FE5DA62A469ED90044D5B6;
 			packageReferences = (
-				F1F08A972A47F7CA0008D0F5 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 			);
 			productRefGroup = 88FE5DB02A469ED90044D5B6 /* Products */;
 			projectDirPath = "";
@@ -160,7 +153,6 @@
 				88FE5DB52A469ED90044D5B6 /* ContentView.swift in Sources */,
 				F1F08A962A46E5600008D0F5 /* AnimationView.swift in Sources */,
 				F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */,
-				F1F08A9B2A47F7E40008D0F5 /* UselessThingsSupport.swift in Sources */,
 				F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */,
 				88FE5DB32A469ED90044D5B6 /* Useless_AppApp.swift in Sources */,
 			);
@@ -361,25 +353,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F1F08A972A47F7CA0008D0F5 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F1F08A982A47F7CA0008D0F5 /* ChatGPTSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1F08A972A47F7CA0008D0F5 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
-			productName = ChatGPTSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88FE5DA72A469ED90044D5B6 /* Project object */;
 }

@@ -1,11 +1,12 @@
 import SwiftUI
+import AVKit
 
 struct AnimationView: View {
     @State var penguin  = penguinType.robot
     //    @Binding var penguin: penguinType
     @State var up: CGFloat = 0.0
     @State var rotation: Double = 0.0
-    @State var showPole: Bool = true
+    let synthesizer = AVSpeechSynthesizer()
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
@@ -36,7 +37,6 @@ struct AnimationView: View {
                         up = up - 800
                         print(up)
                     }
-                    showPole = false
                 } label: {
                     HStack {
                         Image(systemName: "chevron.up.circle.fill")
@@ -54,6 +54,9 @@ struct AnimationView: View {
                         up = up + 800
                         rotation = 90
                     }
+                    let utterance = AVSpeechUtterance(string: penguinPhrases.randomElement() ?? "Waddle-icious greetings! Did you know that penguins invented the phrase 'cool beans'? We're the masters of chilly lingo!")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    synthesizer.speak(utterance)
                 } label: {
                     HStack {
                         Image(systemName: "chevron.down.circle.fill")
