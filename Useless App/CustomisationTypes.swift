@@ -9,7 +9,7 @@ enum kindOfBrain {
 }
 
 enum traitsHad {
-    case curious, dangerous, loyal, brave, bossy
+    case curious, dangerous, loyal, brave, bossy, chilled, stressed
 }
 
 enum flipperKind {
@@ -32,8 +32,14 @@ enum genderOfPenguin {
     case male, female, other
 }
 
+// Text field for eatihg capacity
+
 enum diet {
     case fish, plants, plantsAndFish, allMeats, plantsAndAllMeats, everything
+}
+
+enum slideSpeed {
+    case fast, superFast, slow, superSlow, normal, crawling, stationary
 }
 
 let penguinPhrases = [
