@@ -33,6 +33,10 @@ enum genderOfPenguin {
 }
 
 // Text field for eatihg capacity
+// IQ Level Slider
+// Number of eyelash slider
+// Number of TV shows watched
+// Seconds of Time Wasted (min 30s, max 1,000,000s) - last one
 
 enum diet {
     case fish, plants, plantsAndFish, allMeats, plantsAndAllMeats, everything
@@ -40,6 +44,10 @@ enum diet {
 
 enum slideSpeed {
     case fast, superFast, slow, superSlow, normal, crawling, stationary
+}
+
+enum earShape {
+    case cauliflower, attached, detached
 }
 
 let penguinPhrases = [
