@@ -5,6 +5,7 @@ struct AnimationView: View {
     @Binding var penguin: penguinType
     @State var up: CGFloat = 0.0
     @State var rotation: Double = 0.0
+    @Binding var stationary: slideSpeed
     let synthesizer = AVSpeechSynthesizer()
     var body: some View {
         VStack(spacing: 0) {
@@ -30,18 +31,23 @@ struct AnimationView: View {
                 }
             }
             
-            if up != -800 {
+            if up != -900 {
                 Button {
-                    withAnimation(.easeIn(duration: 3)) {
-                        up = up - 800
-                        print(up)
+                    if stationary != slideSpeed.stationary {
+                        withAnimation(.easeIn(duration: 3)) {
+                            up = up - 900
+                            print(up)
+                        }
                     }
+                    let utterance = AVSpeechUtterance(string: penguinPhrases.randomElement() ?? "Waddle-icious greetings! Did you know that penguins invented the phrase 'cool beans'? We're the masters of chilly lingo!")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                    synthesizer.speak(utterance)
                 } label: {
                     HStack {
                         Image(systemName: "chevron.up.circle.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
-                        Text("Lift")
+                        Text("Go Upwards")
                             .font(.system(size: 30, weight: .regular, design: .monospaced))
                     }
                 }
@@ -49,9 +55,11 @@ struct AnimationView: View {
                 .buttonStyle(.borderedProminent)
             } else {
                 Button {
-                    withAnimation(.easeIn(duration: 3)) {
-                        up = up + 800
-                        rotation = 90
+                    if stationary != slideSpeed.stationary {
+                        withAnimation(.easeIn(duration: 3)) {
+                            up = up + 900
+                            rotation = 90
+                        }
                     }
                     let utterance = AVSpeechUtterance(string: penguinPhrases.randomElement() ?? "Waddle-icious greetings! Did you know that penguins invented the phrase 'cool beans'? We're the masters of chilly lingo!")
                     utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
@@ -61,7 +69,7 @@ struct AnimationView: View {
                         Image(systemName: "chevron.down.circle.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
-                        Text("Down")
+                        Text("Downwards!")
                             .font(.system(size: 30, weight: .regular, design: .monospaced))
                     }
                 }

@@ -19,6 +19,13 @@ struct PenguinCustomizer: View {
     @State var food: diet = .fish
     @State var summonAnimator: Bool = false
     @State var summonAlert: Bool = false
+    @State var eatingCapacity: String = ""
+    @State var iq = 30.0
+    @State var eyelashes = 7.0
+    @State var tvShowsWatched = 0.0
+    @State var secondsOfTimeWasted = 50.0
+    @State var slidingSpeed = slideSpeed.normal
+    @State var shapeOfEar = earShape.attached
     
     var body: some View {
         VStack {
@@ -115,6 +122,72 @@ struct PenguinCustomizer: View {
                             .tag(diet.everything)
                     }
                     .pickerStyle(.menu)
+                    
+                    Picker("Slide Speed", selection: $slidingSpeed) {
+                        Text("Super Fast")
+                            .tag(slideSpeed.fast)
+                        Text("Fast")
+                            .tag(slideSpeed.superFast)
+                        Text("Normal")
+                            .tag(slideSpeed.normal)
+                        Text("Slow")
+                            .tag(slideSpeed.slow)
+                        Text("Super Slow")
+                            .tag(slideSpeed.superSlow)
+                        Text("Crawling")
+                            .tag(slideSpeed.crawling)
+                        Text("Stationery")
+                            .tag(slideSpeed.stationary)
+                    }
+                    .pickerStyle(.menu)
+                    
+                    Picker("Ear Shape", selection: $shapeOfEar) {
+                        Text("Cauliflower")
+                            .tag(earShape.cauliflower)
+                        Text("Attached")
+                            .tag(earShape.attached)
+                        Text("Detached")
+                            .tag(earShape.detached)
+                    }
+                    .pickerStyle(.menu)
+                    
+                    TextField("Eating Capacity (in KG)", text: $eatingCapacity)
+                }
+                
+                Section("IQ") {
+                    Slider(value: $iq,
+                           in: 10...1000) {
+                        Text("Speed")
+                    } minimumValueLabel: {
+                        Text("10")
+                    } maximumValueLabel: {
+                        Text("1000")
+                    }
+                    Text("IQ: \(Int(iq))")
+                }
+                
+                Section("Number of Eyelashes") {
+                    Slider(value: $eyelashes,
+                           in: 0...3000) {
+                        Text("Speed")
+                    } minimumValueLabel: {
+                        Text("0")
+                    } maximumValueLabel: {
+                        Text("3000")
+                    }
+                    Text("Number of Eyelashes: \(Int(eyelashes))")
+                }
+                
+                Section("Number of TV Shows watched") {
+                    Slider(value: $tvShowsWatched,
+                           in: 0...1000000) {
+                        Text("Speed")
+                    } minimumValueLabel: {
+                        Text("0")
+                    } maximumValueLabel: {
+                        Text("All")
+                    }
+                    Text("Number of TV Shows watched: \(Int(tvShowsWatched))")
                 }
                 
                 if penguin == penguinType.robot {
@@ -149,7 +222,21 @@ struct PenguinCustomizer: View {
                         Label("Generative AIs are prone to failure", systemImage: "exclamationmark.triangle.fill")
                     }
                 }
+                
+                Section("Seconds of time wasted") {
+                    Slider(value: $secondsOfTimeWasted,
+                           in: 30...1000000000) {
+                        Text("Speed")
+                    } minimumValueLabel: {
+                        Text("30s")
+                    } maximumValueLabel: {
+                        Text("1Bs")
+                    }
+                    Text("Seconds Wasted: \(Int(secondsOfTimeWasted))")
+                }
+                
                 Button {
+                    
                     summonAlert = true
                 } label: {
                     Text("See your penguin!")
@@ -158,14 +245,17 @@ struct PenguinCustomizer: View {
         }
         .alert("Are you sure you want to continue? There is NO going back", isPresented: $summonAlert) {
             Button("Yes", role: .destructive) {
-               summonAnimator = true
+                summonAnimator = true
             }
             Button("No", role: .cancel) {
                 summonAlert = false
             }
         }
+        
+
+        
         .fullScreenCover(isPresented: $summonAnimator) {
-            AnimationView(penguin: $penguin)
+            AnimationView(penguin: $penguin, stationary: $slidingSpeed)
         }
         
     }
