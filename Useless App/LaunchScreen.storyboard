@@ -22,10 +22,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="80" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The mooooooost uselss app LOLOLOLOLOLOLOL" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="80" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
                                 <rect key="frame" x="16" y="21" width="361" height="797"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">nfusnufgnergnnrebrgubyebyerbygbybrgeybgyebrgybriwekwbgjsbggyrubhefjndyggufhbdjnbuebiuwbribewrirbdsjabj bajgbrbuebwgbdkj vbrbeubuerwbubiehwgiuhguiewhrgiuhjrgjbdfjvbvreubjbjbjbdjbwbperuhuehwrehguprehpwheufhjwvbjwvnve</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="109"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
