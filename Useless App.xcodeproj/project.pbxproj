@@ -11,6 +11,7 @@
 		88FE5DB52A469ED90044D5B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE5DB42A469ED90044D5B6 /* ContentView.swift */; };
 		88FE5DB72A469EDA0044D5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */; };
 		88FE5DBA2A469EDA0044D5B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE5DB92A469EDA0044D5B6 /* Preview Assets.xcassets */; };
+		F1630F132A4FBC960085FBF5 /* FlashbangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1630F122A4FBC960085FBF5 /* FlashbangView.swift */; };
 		F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02472A46A034003524AC /* PenguinCustomizer.swift */; };
 		F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02492A46A289003524AC /* CustomisationTypes.swift */; };
 		F1F08A962A46E5600008D0F5 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F08A952A46E5600008D0F5 /* AnimationView.swift */; };
@@ -23,6 +24,7 @@
 		88FE5DB42A469ED90044D5B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FE5DB92A469EDA0044D5B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1630F122A4FBC960085FBF5 /* FlashbangView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashbangView.swift; sourceTree = "<group>"; };
 		F1AE02472A46A034003524AC /* PenguinCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinCustomizer.swift; sourceTree = "<group>"; };
 		F1AE02492A46A289003524AC /* CustomisationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomisationTypes.swift; sourceTree = "<group>"; };
 		F1F08A952A46E5600008D0F5 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				F1F08AA32A48048C0008D0F5 /* Useless-App-Info.plist */,
 				88FE5DB22A469ED90044D5B6 /* Useless_AppApp.swift */,
 				88FE5DB42A469ED90044D5B6 /* ContentView.swift */,
+				F1630F122A4FBC960085FBF5 /* FlashbangView.swift */,
 				F1AE02492A46A289003524AC /* CustomisationTypes.swift */,
 				F1AE02472A46A034003524AC /* PenguinCustomizer.swift */,
 				F1F08AA12A4804600008D0F5 /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */,
 				F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */,
 				88FE5DB32A469ED90044D5B6 /* Useless_AppApp.swift in Sources */,
+				F1630F132A4FBC960085FBF5 /* FlashbangView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
