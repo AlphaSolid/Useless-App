@@ -26,6 +26,9 @@ struct PenguinCustomizer: View {
     @State var secondsOfTimeWasted = 50.0
     @State var slidingSpeed = slideSpeed.normal
     @State var shapeOfEar = earShape.attached
+    @State var speed = 10.0
+    @State var otp = 9900.0
+    @State var currentSeason = season.winter
     
     var body: some View {
         VStack {
@@ -151,6 +154,18 @@ struct PenguinCustomizer: View {
                     }
                     .pickerStyle(.menu)
                     
+                    Picker("Season", selection: $currentSeason) {
+                        Text("Spring")
+                            .tag(season.spring)
+                        Text("Summer")
+                            .tag(season.summer)
+                        Text("Autumn")
+                            .tag(season.autumn)
+                        Text("Winter")
+                            .tag(season.winter)
+                    }
+                    .pickerStyle(.menu)
+                    
                     TextField("Eating Capacity (in KG)", text: $eatingCapacity)
                 }
                 
@@ -189,6 +204,31 @@ struct PenguinCustomizer: View {
                     }
                     Text("Number of TV Shows watched: \(Int(tvShowsWatched))")
                 }
+                
+                Section("Speed") {
+                    Slider(value: $speed,
+                           in: 0...1000000) {
+                        Text("Speed")
+                    } minimumValueLabel: {
+                        Text("0 km/h")
+                    } maximumValueLabel: {
+                        Text("1M km/h")
+                    }
+                    Text("Speed: \(Int(speed)) km/h")
+                }
+                
+                Section("OTP (the best UI design)") {
+                    Slider(value: $otp,
+                           in: 1000...9999) {
+                        Text("One-Time Password")
+                    } minimumValueLabel: {
+                        Text("1000")
+                    } maximumValueLabel: {
+                        Text("999")
+                    }
+                    Text("OTP: \(Int(otp))")
+                }
+
                 
                 if penguin == penguinType.robot {
                     Section("Robots Only") {
@@ -255,7 +295,7 @@ struct PenguinCustomizer: View {
 
         
         .fullScreenCover(isPresented: $summonAnimator) {
-            AnimationView(penguin: $penguin, stationary: $slidingSpeed)
+            AnimationView(penguin: $penguin, stationary: $slidingSpeed, currentSeason: $currentSeason)
         }
         
     }

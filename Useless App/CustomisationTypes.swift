@@ -37,6 +37,7 @@ enum genderOfPenguin {
 // Number of eyelash slider
 // Number of TV shows watched
 // Seconds of Time Wasted (min 30s, max 1,000,000s) - last one
+// Penguin Speed Slider
 
 enum diet {
     case fish, plants, plantsAndFish, allMeats, plantsAndAllMeats, everything
@@ -48,6 +49,10 @@ enum slideSpeed {
 
 enum earShape {
     case cauliflower, attached, detached
+}
+
+enum season {
+    case spring, summer, autumn, winter
 }
 
 let penguinPhrases = [
