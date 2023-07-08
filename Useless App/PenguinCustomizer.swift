@@ -232,7 +232,7 @@ struct PenguinCustomizer: View {
                 
                 if penguin == penguinType.robot {
                     Section("Robots Only") {
-                        Picker("Generative Type", selection: $flipper) {
+                        Picker("Generative Type", selection: $generation) {
                             Text("Natural")
                                 .tag(generativeType.natural)
                             Text("Robotic")
