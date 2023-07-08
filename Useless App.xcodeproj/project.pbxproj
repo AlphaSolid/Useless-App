@@ -12,6 +12,8 @@
 		88FE5DB72A469EDA0044D5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */; };
 		88FE5DBA2A469EDA0044D5B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE5DB92A469EDA0044D5B6 /* Preview Assets.xcassets */; };
 		F1630F132A4FBC960085FBF5 /* FlashbangView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1630F122A4FBC960085FBF5 /* FlashbangView.swift */; };
+		F194DAA82A4FC68A008C3D2F /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = F194DAA72A4FC68A008C3D2F /* Subsonic */; };
+		F194DAAA2A4FC69B008C3D2F /* PunjabiMC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F194DAA92A4FC69B008C3D2F /* PunjabiMC.mp3 */; };
 		F1AE02482A46A034003524AC /* PenguinCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02472A46A034003524AC /* PenguinCustomizer.swift */; };
 		F1AE024A2A46A289003524AC /* CustomisationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AE02492A46A289003524AC /* CustomisationTypes.swift */; };
 		F1F08A962A46E5600008D0F5 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F08A952A46E5600008D0F5 /* AnimationView.swift */; };
@@ -25,6 +27,7 @@
 		88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88FE5DB92A469EDA0044D5B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1630F122A4FBC960085FBF5 /* FlashbangView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashbangView.swift; sourceTree = "<group>"; };
+		F194DAA92A4FC69B008C3D2F /* PunjabiMC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PunjabiMC.mp3; sourceTree = "<group>"; };
 		F1AE02472A46A034003524AC /* PenguinCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinCustomizer.swift; sourceTree = "<group>"; };
 		F1AE02492A46A289003524AC /* CustomisationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomisationTypes.swift; sourceTree = "<group>"; };
 		F1F08A952A46E5600008D0F5 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F194DAA82A4FC68A008C3D2F /* Subsonic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 				F1F08AA12A4804600008D0F5 /* LaunchScreen.storyboard */,
 				88FE5DB62A469EDA0044D5B6 /* Assets.xcassets */,
 				F1F08A952A46E5600008D0F5 /* AnimationView.swift */,
+				F194DAA92A4FC69B008C3D2F /* PunjabiMC.mp3 */,
 				88FE5DB82A469EDA0044D5B6 /* Preview Content */,
 			);
 			path = "Useless App";
@@ -101,6 +106,7 @@
 			);
 			name = "Useless App";
 			packageProductDependencies = (
+				F194DAA72A4FC68A008C3D2F /* Subsonic */,
 			);
 			productName = "Useless App";
 			productReference = 88FE5DAF2A469ED90044D5B6 /* Useless App.app */;
@@ -131,6 +137,7 @@
 			);
 			mainGroup = 88FE5DA62A469ED90044D5B6;
 			packageReferences = (
+				F194DAA62A4FC68A008C3D2F /* XCRemoteSwiftPackageReference "Subsonic" */,
 			);
 			productRefGroup = 88FE5DB02A469ED90044D5B6 /* Products */;
 			projectDirPath = "";
@@ -146,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F194DAAA2A4FC69B008C3D2F /* PunjabiMC.mp3 in Resources */,
 				F1F08AA22A4804600008D0F5 /* LaunchScreen.storyboard in Resources */,
 				88FE5DBA2A469EDA0044D5B6 /* Preview Assets.xcassets in Resources */,
 				88FE5DB72A469EDA0044D5B6 /* Assets.xcassets in Resources */,
@@ -367,6 +375,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F194DAA62A4FC68A008C3D2F /* XCRemoteSwiftPackageReference "Subsonic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Subsonic.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F194DAA72A4FC68A008C3D2F /* Subsonic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F194DAA62A4FC68A008C3D2F /* XCRemoteSwiftPackageReference "Subsonic" */;
+			productName = Subsonic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88FE5DA72A469ED90044D5B6 /* Project object */;
 }

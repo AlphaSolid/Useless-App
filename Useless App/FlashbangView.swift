@@ -1,5 +1,7 @@
 import SwiftUI
 import AVFoundation
+import Subsonic
+
 
 func toggleTorch(on: Bool) {
     guard let device = AVCaptureDevice.default(for: .video) else { return }
@@ -19,6 +21,7 @@ func toggleTorch(on: Bool) {
 }
 
 struct FlashbangView: View {
+    @StateObject private var sound = SubsonicPlayer(sound: "PunjabiMC.mp3")
     var body: some View {
         ZStack {
             Color.white
@@ -30,10 +33,13 @@ struct FlashbangView: View {
         .onAppear {
             UIScreen.main.brightness = 1
             toggleTorch(on: true)
+            sound.play()
+            
         }
         .onDisappear {
             toggleTorch(on: false)
             UIScreen.main.brightness = 0
+            sound.stop()
         }
     }
 }

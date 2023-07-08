@@ -224,7 +224,7 @@ struct PenguinCustomizer: View {
                     } minimumValueLabel: {
                         Text("1000")
                     } maximumValueLabel: {
-                        Text("999")
+                        Text("9999")
                     }
                     Text("OTP: \(Int(otp))")
                 }
